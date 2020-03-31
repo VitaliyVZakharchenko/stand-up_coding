@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 8px;
+}
+
+.content {
+    display: flex;
+    background-color: pink;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.sidebar {
