@@ -3,7 +3,7 @@
 // input: array
 // output: array
 
-function squareArr(arr) {
+function squareArray (arr) {
     const result = [];
 
     if (!Array.isArray(arr)) {
@@ -18,6 +18,6 @@ function squareArr(arr) {
 }
 
 const numbers = [4, 5, 3, 4, 5, 8];
-const result = squareArr(numbers);
+const result = squareArray(numbers);
 
 console.log(result);
