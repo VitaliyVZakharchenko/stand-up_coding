@@ -119,12 +119,14 @@ console.log(evenNumbers);
 /* ф-ция callback запустится по очереди для каждого элемента начального массива arr */
 /* если callback(arr[i]) вернет true, то filter прекратит поиск и вернет этот элемент */
 
-// c помощью метода find найдите первое нечетное число в numbersList и выведите его в консоль
+// c помощью метода find найдите первое нечетное число
+// в numbersList и выведите его в консоль
 
 // ... code here
 
 function callback(num) {
     return num % 2 === 1;
 }
+
 const firstOdd = numbersList.find(callback);
-console.log(numbersList);
+console.log(firstOdd);
