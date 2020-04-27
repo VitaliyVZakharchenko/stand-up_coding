@@ -15,6 +15,7 @@ const numbersList = [1, 2, 3, 4, 5];
 
 // ... code here
 
+
 const lastNumber = numbersList.pop();
 console.log(lastNumber);
 
@@ -28,14 +29,15 @@ console.log(lastNumber);
 
 // ... code here
 
+
 const result = numbersList.push(6);
-// console.log(result);
 console.log(numbersList);
 
 
 /* shift - удалит из массива первый элемент и вернет его */
 
-// c помощью метода shift достаньте первый элемент массива и поместите его в переменную firstNumber
+// c помощью метода shift достаньте первый элемент массива и поместите его
+// в переменную firstNumber
 // выведите эту переменную в консоль
 
 // ... code here
@@ -52,7 +54,7 @@ console.log(firstNumber);
 
 // ... code here
 
-const firstNumber = numbersList.unshift(0);
+numbersList.unshift(0);
 console.log(numbersList);
 
 // const newArr = [];
@@ -73,28 +75,24 @@ console.log(numbersList);
 
 
 /* метод map */
-/* const newArr = arr.map(callback) - создает и возвращает новый массив. Длина нового и исходного массивов равны */
+/* const newArr = arr.map(callback) - создает и возвращает новый массив. Длина
+нового и исходного массивов равны */
 /* ф-ция callback запустится по очереди для каждого элемента начального массива arr */
 /* элементы массива newArr - это результат вызова callback для каждого элемента arr */
 /* newArr[i] = callback(arr[i]) */
 
-// c помощью метода map создайте новый массив squaredNumbers, в котором будут квадраты чисел из numbersList
+// c помощью метода map создайте новый массив squaredNumbers,
+// в котором будут квадраты чисел из numbersList
 // выведите squaredNumbers в консоль
 
 // ... code here
 
 
 function square(num) {
-    // console.log('');
     return num * num;
 }
-
-// console.log(numbersList);
-
 const squaredNumbers = numbersList.map(square);
-
 console.log(squaredNumbers);
-// console.log(squaredNumbers === numbersList);
 
 
 /* метод filter */
@@ -104,25 +102,18 @@ console.log(squaredNumbers);
 /* callback(arr[i]) === true -> элемент будет добавлен в финальный массив  */
 /* callback(arr[i]) === false -> элемент НЕ будет добавлен в финальный массив  */
 
-// c помощью метода filter создайте новый массив evenNumbers, в котором только четные числа из numbersList
+// c помощью метода filter создайте новый массив evenNumbers,
+// в котором только четные числа из numbersList
 // выведите evenNumbers в консоль
 
 // ... code here
 
+
 function filterFunc(num) {
-    console.log('call');
-    if (num % 2 === 0) {
-        
-    }
-    // const isOk = num;
+    return num % 2 === 0;
 }
-
 const evenNumbers = numbersList.filter(filterFunc);
-
-// console.log(numbersList);
 console.log(evenNumbers);
-// console.log(evenNumbers === numbersList);
-
 
 
 /* метод find */
@@ -135,11 +126,7 @@ console.log(evenNumbers);
 // ... code here
 
 function callback(num) {
-    console.log('call');
     return num % 2 === 1;
 }
-
 const firstOdd = numbersList.find(callback);
-
 console.log(numbersList);
-// console.log(firstOdd);
