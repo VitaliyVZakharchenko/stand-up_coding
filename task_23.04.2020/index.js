@@ -20,8 +20,6 @@ const lastNumber = numbersList.pop();
 console.log(lastNumber);
 
 
-
-
 /* push - добавит элемент в конец массива */
 
 // c помощью метода push добавьте число 6 в конец массива
