@@ -9,15 +9,16 @@ const numbersList = [1, 2, 3, 4, 5];
 
 /* pop - удалит из массива последний элемент и вернет его */
 
-// c помощью метода pop достаньте последний элемент массива и поместите его в переменную lastNumber
+// c помощью метода pop достаньте последний элемент массива
+// и поместите его в переменную lastNumber
 // выведите эту переменную в консоль
 
 // ... code here
 
-
-const  lastNumber = numbersList.pop();
+const lastNumber = numbersList.pop();
 console.log(lastNumber);
-console.log(numbersList);
+
+
 
 
 /* push - добавит элемент в конец массива */
@@ -27,9 +28,8 @@ console.log(numbersList);
 
 // ... code here
 
-
-const result = numbersList.push(10);
-console.log(result);
+const result = numbersList.push(6);
+// console.log(result);
 console.log(numbersList);
 
 
@@ -52,20 +52,19 @@ console.log(firstNumber);
 
 // ... code here
 
-numbersList.unshift(0);
-const firstNumber = numbersList.shift();
+const firstNumber = numbersList.unshift(0);
 console.log(numbersList);
 
-const newArr = [];
+// const newArr = [];
 
-function func(item, i) {
-    newArr.push(item * item);
-    // или
-    numbersList[i] = item * item;
-    // console.log(item);
-}
+// function func(item, i) {
+//     newArr.push(item * item);
+//     // или
+//     numbersList[i] = item * item;
+//     // console.log(item);
+// }
 
-numbersList.forEach(func);
+// numbersList.forEach(func);
 
 /* ======================================= */
 /* ===> НЕ мутирующие методы массивов <=== */
@@ -86,16 +85,16 @@ numbersList.forEach(func);
 
 
 function square(num) {
-    console.log('');
+    // console.log('');
     return num * num;
 }
 
-console.log(numbersList);
+// console.log(numbersList);
 
 const squaredNumbers = numbersList.map(square);
 
 console.log(squaredNumbers);
-console.log(squaredNumbers === numbersList);
+// console.log(squaredNumbers === numbersList);
 
 
 /* метод filter */
@@ -120,9 +119,9 @@ function filterFunc(num) {
 
 const evenNumbers = numbersList.filter(filterFunc);
 
-console.log(numbersList);
+// console.log(numbersList);
 console.log(evenNumbers);
-console.log(evenNumbers === numbersList);
+// console.log(evenNumbers === numbersList);
 
 
 
@@ -143,4 +142,4 @@ function callback(num) {
 const firstOdd = numbersList.find(callback);
 
 console.log(numbersList);
-console.log(firstOdd);
+// console.log(firstOdd);
