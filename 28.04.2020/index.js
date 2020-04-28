@@ -19,7 +19,7 @@ const getTotalPrice = (arr) => {
         // acc + num
         }
     )    
-    console.log(sum);
+    // console.log(sum);
     return '$' + Math.floor(sum * 100) / 100;
 };
 
