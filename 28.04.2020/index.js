@@ -1,5 +1,5 @@
 'use strict'
-const numbersList = [4.78, 6.9, 36646];
+const numbersList = [4.784, 6.9324, 36646.48];
 
 // function callback (acc, num) {
 //     console.log(acc, num);
@@ -16,7 +16,9 @@ const numbersList = [4.78, 6.9, 36646];
 const getTotalPrice = (arr) => {
     const sum = arr.reduce(function callback(acc, num) {
         return acc + num;
-    }, 0);    
+        // acc + num
+        }
+    )    
     console.log(sum);
     return '$' + Math.floor(sum * 100) / 100;
 };
