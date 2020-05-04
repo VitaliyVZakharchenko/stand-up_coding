@@ -6,7 +6,7 @@ const addPropertyV1 = (userData, userId) => {
 };
 
 const addPropertyV2 = (userData, userId) =>
-    Object.assign(userData, {id: userId});
+    Object.assign({}, userData, {id: userId});
 
 const addPropertyV3 = (userData, userId) =>
     Object.assign({}, userData, {id: userId});
@@ -15,8 +15,8 @@ const addPropertyV4 = (userData, userId) => {
     return {...userData, id: userId};
 };
 
-// const user = {
-//     name:'Sam'
-// }
+const user = {
+    name:'Sam'
+}
 
-// console.log(addPropertyV4(user, 12345));
+console.log(addPropertyV2(user, 12345));
