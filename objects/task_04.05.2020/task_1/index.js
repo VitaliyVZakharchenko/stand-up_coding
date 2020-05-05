@@ -14,9 +14,3 @@ const addPropertyV3 = (userData, userId) =>
 const addPropertyV4 = (userData, userId) => {
     return {...userData, id: userId};
 };
-
-const user = {
-    name:'Sam'
-}
-
-console.log(addPropertyV2(user, 12345));
