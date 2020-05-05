@@ -1,17 +1,9 @@
-const buildObject = (keysList, valuesList) => { 
-    let obj = {};
-
+const buildObject = (keysList, valuesList) =>
     keysList.reduce((acc, key, index) => {
     return {...acc, [key]: valuesList[index]};
-    }, obj)
-};
+    }, {});
 
+const keys = ['name', 'address', 'age'];
+const values = ['Bob', 'Ukraine', 34];
 
-
-
-const getCustomersList = obj => {        
-    return Object.entries(obj).map(
-        (entry) => Object.assign(entry[1], { id: entry[0] })
-    ).sort((a, b) =>  a.age - b.age);
-
-};
+console.log(buildObject(keys, values));
