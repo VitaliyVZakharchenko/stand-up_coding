@@ -12,6 +12,7 @@ export const timer = {
         }, 1000);
         // this.timerId = timerId;
     },
+    
     getTime() {
         let secs = this.secondsPassed < 10 ? `0${this.secondsPassed}` : this.secondsPassed;
         return `${this.minsPassed}:${secs}`;
