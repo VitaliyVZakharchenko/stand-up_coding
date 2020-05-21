@@ -42,7 +42,10 @@ const user = {
         return `${this.firstName} ${this.lastName}` },
 
     set fullName(value) {
-        [this.firtsName, this.lastName] = fullName.split(' ');
+        const [firstName, lastName] = value.split(' ');
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 }
+
 export default user;
