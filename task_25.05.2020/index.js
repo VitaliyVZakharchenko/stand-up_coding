@@ -15,6 +15,6 @@ export class Swimmer extends Sportsman {
     }
 
     swim() {
-        console.log(`${this.name} swimming ${this.style}`);
+        console.log(`${this.name} is swimming ${this.style}`);
     }
 }
