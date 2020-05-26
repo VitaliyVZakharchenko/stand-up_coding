@@ -8,10 +8,7 @@ export function finishList() {
     elOne.textContent = 1;
     listEl.prepend(elOne);
 
-    const elTwo = document.createElement('li');
-    elTwo.textContent = 8;
-    listEl.append(elTwo);
-
+    
     const specialEl = document.querySelector('.special');
     const el4 = document.createElement('li');
     el4.textContent = 4;
@@ -19,7 +16,11 @@ export function finishList() {
 
     const el6 = document.createElement('li');
     el6.textContent = 6;
-    specialEl.append(el6);
+    specialEl.after(el6);
+
+    const el8 = document.createElement('li');
+    el8.textContent = 8;
+    listEl.append(el8);
 }
 
 finishList();
