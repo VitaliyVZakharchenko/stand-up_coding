@@ -1,6 +1,6 @@
 'use strict';
 
-export function finishList() {
+export const finishList = () => {
     const listEl = document.querySelector('.list');
     const el2 = document.querySelectorAll('li');
 
@@ -22,4 +22,4 @@ export function finishList() {
     listEl.append(el8);
 }
 
-finishList();
+// finishList();
