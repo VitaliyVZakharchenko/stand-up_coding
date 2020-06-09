@@ -19,7 +19,7 @@ export const timer = {
     },
     stopTimer() {
         clearInterval(this.timerId);
-        // this.timerId = null;
+        this.timerId = null;
     },
     resetTimer() {
         this.stopTimer();
