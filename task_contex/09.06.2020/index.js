@@ -28,6 +28,7 @@ export const timer = {
     },
 }
 
+
 //let secondsPassed = 0;
 
 
