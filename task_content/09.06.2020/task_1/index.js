@@ -5,9 +5,9 @@ export const timer = {
 
     startTimer() {
         this.timerId = setInterval(() => {
-            this.secondsPassed +=1;
-            if(this.secondsPassed === 60) {
-                this.minsPassed +=1;
+            this.secondsPassed += 1;
+            if (this.secondsPassed === 60) {
+                this.minsPassed += 1;
                 this.secondsPassed = 0;
             }
         }, 1000);
@@ -19,7 +19,7 @@ export const timer = {
     },
     stopTimer() {
         clearInterval(this.timerId);
-        this.timerId = null;
+        // this.timerId = null;
     },
     resetTimer() {
         this.stopTimer();
