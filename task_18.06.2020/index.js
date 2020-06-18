@@ -3,21 +3,21 @@ const tasks = [{
     done: false,
     id: 1,
     createDate: new Date(2015, 9, 1, 0, 0, 0, 0),
-    doneDate: undefined,
+    doneDate: null,
 },
 {
     text: 'Pick up Tom from airport',
     done: false,
     id: 2,
     createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
-    doneDate: undefined,
+    doneDate: null,
 },
 {
     text: 'Visit party',
     done: false,
     id: 3,
     createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
-    doneDate: undefined,
+    doneDate: null,
 },
 {
     text: 'Visit doctor',
@@ -34,14 +34,13 @@ const tasks = [{
     doneDate: new Date(2019, 6, 4),
 },
 ];
-
 const listElem = document.querySelector('.list');
 const crtBtnElem = document.querySelector('.create-task-btn');
 const inputElem = document.querySelector('.task-input');
+const renderTasks = listItems => {
+listElem.innerHTML = '';
 
-const renderTasks = tasks => {
-const listElem = document.querySelector('.list');
-const listItemsElems = tasks
+const listItemsElems = listItems
     .sort((a, b) => {
         if (a.done - b.done !== 0) {
             return a.done - b.done;
@@ -50,7 +49,8 @@ const listItemsElems = tasks
             return new Date(b.finishDate) - new Date(a.finishDate);
         }
         return new Date(b.createDate) - new Date(a.createDate);
-    }).map(({ text, done, id }) => {
+    })
+    .map(({ text, done, id }) => {
         const listItemElem = document.createElement('li');
         listItemElem.classList.add('list__item');
         listItemElem.dataset.id = `${id}`;
@@ -64,45 +64,39 @@ const listItemsElems = tasks
         listItemElem.append(checkboxItem, text);
         return listItemElem;
     });
-    
     listElem.append(...listItemsElems);
 };
 
-renderTasks(tasks);
-
 const updateTask = (event) => {
     const checkedElem = event.target;
-    
     if (checkedElem.tagName !== 'INPUT') {
         return;
     }
 
     const taskById = tasks
-        .find(task => task.id === +checkedElem.parentElement.dataset.id);
-    
+    .find(task => task.id === +checkedElem.parentElement.dataset.id);
     taskById.done = checkedElem.checked;
-    taskById.doneDate = taskById.done ? new Date(): null;
-    
-    listElem.innerHTML = '';
+    taskById.doneDate = taskById.done ? new Date() : null;
+
     renderTasks(tasks);
-};
+    };
 
 const createTask = () => {
     if (inputElem.value === '') {
-        return;
+    return;
     }
 
     tasks.push({
-        id: tasks.length + 1,
-        text: inputElem.value,
-        done: false,
-        createDate: new Date(),
-        doneDate: null,
+    id: tasks.length + 1,
+    text: inputElem.value,
+    done: false,
+    createDate: new Date(),
+    doneDate: null,
     });
 
-    inputElem.value = '';
     renderTasks(tasks);
 };
 
+renderTasks(tasks);
 listElem.addEventListener('click', updateTask);
 crtBtnElem.addEventListener('click', createTask);
