@@ -81,7 +81,7 @@ const updateTask = (event) => {
     taskById.done = checkedElem.checked;
     taskById.doneDate = taskById.done ? new Date(): null;
     
-    listElem.innerHTML = '';
+    // listElem.innerHTML = '';
     renderTasks(tasks);
 };
 
@@ -98,7 +98,7 @@ const createTask = () => {
         doneDate: null,
     });
 
-    // inputElem.value = '';
+    inputElem.value = '';
     renderTasks(tasks);
 };
 
