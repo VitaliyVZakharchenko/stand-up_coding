@@ -6,9 +6,9 @@ const setButton = (buttonText) => {
 }
 
 // вариант №2
-const setButton = (buttonText) => {
-    const button = document.createElement('button');
-    button.textContent = buttonText;
+// const setButton = (buttonText) => {
+//     const button = document.createElement('button');
+//     button.textContent = buttonText;
 
-    document.querySelector('body').append(button);
-}
+//     document.querySelector('body').append(button);
+// }
