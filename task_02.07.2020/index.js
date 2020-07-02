@@ -14,7 +14,7 @@ const onValid = () => {
     errorElem.textContent = '';
 };
 
-const createUser = async user => {
+const createUser = async (user) => {
     const response = await fetch(serverUrl, {
         method: 'POST',
         headers: {
@@ -31,7 +31,7 @@ const createUser = async user => {
     return response.json();
 };
 
-const onSendData = async event => {
+const onSendData = async (event) => {
     event.preventDefault();
 
     const formData = Object.fromEntries(new FormData(formElem));
