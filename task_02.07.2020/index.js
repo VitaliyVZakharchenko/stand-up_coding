@@ -1,5 +1,6 @@
 'use strict';
-const serverUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/userForm'
+
+const serverUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/userForm';
 
 const inputs = document.querySelectorAll('.form-input');
 const submitBtnElem = document.querySelector('.submit-button');
@@ -11,16 +12,15 @@ const onValid = () => {
         submitBtnElem.disabled = false :
         submitBtnElem.disabled = true;
     errorElem.textContent = '';
-}
+};
 
 const createUser = async (user) => {
-
     const response = await fetch(serverUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
+        },
+        body: JSON.stringify(user),
     });
 
     if(!response.ok) {
@@ -29,19 +29,19 @@ const createUser = async (user) => {
     }
 
     return response.json();
-}
+};
 
 const onSendData = async (event) => {
     event.preventDefault();
 
-    const formData = Object.fromEntries(new FormData(formElem))
+    const formData = Object.fromEntries(new FormData(formElem));
 
     const userData = await createUser(formData);
 
     inputs.forEach(elem => elem.value = '');
     submitBtnElem.disabled = true;
     alert(JSON.stringify(userData));
-}
+};
 
 formElem.addEventListener('submit', onSendData);
 formElem.addEventListener('input', onValid);
