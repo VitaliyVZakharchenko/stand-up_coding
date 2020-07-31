@@ -17,4 +17,4 @@ function getPrimes (n) {
     }
 }
 
-getPrimes(10);
+// getPrimes(10);
