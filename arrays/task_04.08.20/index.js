@@ -33,4 +33,4 @@ const callback = (element) => {
     return res;
 }
 
-console.log(filterArray(array, callback));
+// console.log(filterArray(array, callback));
