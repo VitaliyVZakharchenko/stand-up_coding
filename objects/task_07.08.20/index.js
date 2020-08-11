@@ -1,4 +1,5 @@
 function compareObjects(obj1, obj2) {
+
     const keys1 = Object.keys(obj1);
     const keys2 = Object.keys(obj2);
     
@@ -6,21 +7,25 @@ function compareObjects(obj1, obj2) {
         return false;
     }
 
-    keys1.forEach((key, index) => {
-        console.log("KEY1" + key);
-        console.log("VALUE" + obj1[key]);
 
-        console.log("KEY2" + keys2[index]);
-        console.log("VALUE2" + obj2[keys2[index]]);
 
-        if (obj1[key] !== obj2[keys2[index]]) {
-            return false;
-        }
-    });
+    // 1
 
-    // return keys1.reduce((acc, key) => obj1[key] === obj2[key], true);
+    // let res = true;
+    // keys1.forEach((key, index) => {
+    //     if (obj1[key] !== obj2[key]) {
+    //         res = false;
+    //     }
+    // });
+    // return res;
 
-    // console.log();
+
+    // 2
+    // return !keys1.some(key => obj1[key] !== obj2[key]);
+    
+
+    // 3
+    return keys1.reduce((acc, key) => obj1[key] !== obj2[key], true);
 }
 
 
@@ -32,8 +37,9 @@ const obj1 = {
 
 const obj2 = {
     name: 'Tom',
-    age: '1',
-    city: 'Kiev'
+    age: '20',
+    city: 'Kiev',
+    // qwerty: 'qw'
 }
 
 console.log(compareObjects(obj1, obj2));
