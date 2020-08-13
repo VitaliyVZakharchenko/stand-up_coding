@@ -1,7 +1,7 @@
 //input: none
 //output: object
 
-const createLogger = () => {
+export const createLogger = () => {
     const records = [];
     return {
         //input: string
