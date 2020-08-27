@@ -7,5 +7,5 @@ btns.forEach(btn => {
 });
 
 function handleBtnClick(event) {
-    console.log(event.target.innerText);
+    console.log(event.target.textContent);
 };
